@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPS Côte d'Ivoire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🏃 EPS Côte d'Ivoire</h1>
+    <p>Plateforme des professeurs d'EPS</p>
+  </header>
+
+  <main>
+
+    <section class="welcome">
+      <h2>Bienvenue 👋</h2>
+      <p>Retrouvez vos cours, fiches de séances et évaluations.</p>
+    </section>
+
+    <section class="menu">
+
+      <button>
+        📚
+        <span>Cours EPS</span>
+      </button>
+
+      <button>
+        📝
+        <span>Fiches de séances</span>
+      </button>
+
+      <button>
+        🏆
+        <span>Évaluations</span>
+      </button>
+
+      <button>
+        📅
+        <span>Emploi du temps</span>
+      </button>
+
+      <button>
+        👨‍🏫
+        <span>Espace professeur</span>
+      </button>
+
+      <button>
+        🔎
+        <span>Rechercher</span>
+      </button>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 EPS Côte d'Ivoire</p>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
