@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPS Côte d'Ivoire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand: #EAE2CC;
+    --sand-deep: #DCD1AE;
+    --ink: #20281D;
+    --orange: #E1671B;
+    --green: #2F6E4B;
+    --green-deep: #1C4530;
+    --yellow: #F0AC1B;
+    --paper: #F7F3E7;
+    --font-display: 'Archivo Black', sans-serif;
+    --font-body: 'Work Sans', sans-serif;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --sand: #1C2318;
+      --sand-deep: #141a11;
+      --ink: #EDE7D6;
+      --paper: #232B1D;
+      --green: #6FBE8E;
+      --green-deep: #9AD7B2;
+      --orange: #F0824C;
+      --yellow: #F0AC1B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --sand: #1C2318;
+    --sand-deep: #141a11;
+    --ink: #EDE7D6;
+    --paper: #232B1D;
+    --green: #6FBE8E;
+    --green-deep: #9AD7B2;
+    --orange: #F0824C;
+    --yellow: #F0AC1B;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%;}
+
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  header.top{
+    padding:22px 0;
+    border-bottom:1px solid var(--sand-deep);
+  }
+  header.top .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brandmark{
+    font-family:var(--font-display);
+    font-size:18px;
+    letter-spacing:0.01em;
+  }
+  nav.top-nav a{
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+    margin-left:26px;
+    color:var(--ink);
+    opacity:0.75;
+  }
+  nav.top-nav a:hover{opacity:1;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:86px 0 70px;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    position:relative;
+    z-index:2;
+  }
+  .hero-track{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    opacity:0.55;
+  }
+  .hero h1{
+    font-family:var(--font-display);
+    font-size:clamp(40px, 8vw, 74px);
+    line-height:0.98;
+    margin:0 0 22px;
+    max-width:11ch;
+  }
+  .hero p.lede{
+    font-size:19px;
+    max-width:46ch;
+    margin:0 0 34px;
+    color:var(--ink);
+    opacity:0.85;
+  }
+  .hero .cta-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:13px 26px;
+    border-radius:3px;
+    font-weight:600;
+    font-size:15px;
+    text-decoration:none;
+    border:2px solid var(--ink);
+  }
+  .btn-solid{
+    background:var(--orange);
+    color:var(--paper);
+    border-color:var(--orange);
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--ink);
+  }
+
+  /* PRESENTATION */
+  section.presentation{
+    padding:64px 0;
+    background:var(--paper);
+    border-top:1px solid var(--sand-deep);
+    border-bottom:1px solid var(--sand-deep);
+  }
+  .presentation .grid{
+    display:grid;
+    grid-template-columns:1fr 1.6fr;
+    gap:48px;
+  }
+  .presentation h2{
+    font-family:var(--font-display);
+    font-size:26px;
+    margin:0;
+    line-height:1.15;
+  }
+  .presentation .body p{
+    font-size:17px;
+    margin:0 0 16px;
+  }
+  .presentation .body p:last-child{margin-bottom:0;}
+
+  /* OBJECTIFS */
+  section.objectifs{
+    padding:70px 0;
+  }
+  .objectifs h2{
+    font-family:var(--font-display);
+    font-size:26px;
+    margin:0 0 40px;
+  }
+  .obj-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .obj-list li{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:24px;
+    padding:26px 0;
+    border-top:1px solid var(--sand-deep);
+  }
+  .obj-list li:last-child{
+    border-bottom:1px solid var(--sand-deep);
+  }
+  .obj-mark{
+    font-family:var(--font-display);
+    font-size:15px;
+    color:var(--orange);
+    padding-top:2px;
+  }
+  .obj-list h3{
+    margin:0 0 6px;
+    font-size:19px;
+    font-weight:700;
+  }
+  .obj-list p{
+    margin:0;
+    font-size:16px;
+    opacity:0.8;
+    max-width:56ch;
+  }
+
+  /* CONTENU */
+  section.contenu{
+    padding:70px 0 86px;
+    background:var(--green-deep);
+    color:var(--paper);
+  }
+  section.contenu h2{
+    font-family:var(--font-display);
+    font-size:26px;
+    margin:0 0 12px;
+    color:var(--paper);
+  }
+  section.contenu > .wrap > p{
+    font-size:17px;
+    opacity:0.85;
+    max-width:52ch;
+    margin:0 0 40px;
+  }
+  .res-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:2px;
+    background:rgba(247,243,231,0.18);
+  }
+  .res-item{
+    background:var(--green-deep);
+    padding:24px;
+    display:flex;
+    align-items:center;
+  }
+  .res-item h3{
+    font-size:17px;
+    font-weight:600;
+    margin:0;
+    color:var(--paper);
+  }
+
+  /* TECHNOLOGIES */
+  section.tech{
+    padding:64px 0;
+    border-bottom:1px solid var(--sand-deep);
+  }
+  section.tech h2{
+    font-family:var(--font-display);
+    font-size:26px;
+    margin:0 0 30px;
+  }
+  .tech-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .tech-pill{
+    border:2px solid var(--ink);
+    border-radius:999px;
+    padding:9px 20px;
+    font-weight:600;
+    font-size:14px;
+  }
+  .tech-note{
+    margin:22px 0 0;
+    font-size:16px;
+    opacity:0.8;
+    max-width:56ch;
+  }
+
+  /* CLOSING: PROJET + CONTACT */
+  section.closing{
+    padding:70px 0;
+    background:var(--paper);
+  }
+  .closing .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+  }
+  .closing h2{
+    font-family:var(--font-display);
+    font-size:22px;
+    margin:0 0 12px;
+  }
+  .closing p{
+    margin:0;
+    font-size:16px;
+    opacity:0.85;
+    max-width:44ch;
+  }
+
+  footer.site{
+    padding:36px 0;
+    text-align:center;
+    font-size:14px;
+    opacity:0.7;
+  }
+
+  @media (max-width:720px){
+    .presentation .grid{grid-template-columns:1fr;}
+    .res-grid{grid-template-columns:1fr;}
+    nav.top-nav a{margin-left:16px; font-size:14px;}
+    .obj-list li{grid-template-columns:40px 1fr; gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brandmark">EPS Côte d'Ivoire</div>
+    <nav class="top-nav">
+      <a href="#presentation">Présentation</a>
+      <a href="#objectifs">Objectifs</a>
+      <a href="#contenu">Ressources</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="hero-track" viewBox="0 0 920 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M-20,260 C 180,180 300,320 500,220 S 820,140 960,200" stroke="var(--green)" stroke-width="3" fill="none" stroke-dasharray="1 14" stroke-linecap="round"/>
+    <path d="M-20,180 C 220,260 340,120 560,200 S 780,300 960,240" stroke="var(--orange)" stroke-width="3" fill="none" stroke-dasharray="1 14" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap">
+    <h1>Le terrain d'entraînement de l'EPS ivoirienne</h1>
+    <p class="lede">Des cours, des fiches de séance et des activités physiques et sportives pensés pour les enseignants et les élèves de Côte d'Ivoire.</p>
+    <div class="cta-row">
+      <a href="#contenu" class="btn btn-solid">Voir les ressources</a>
+      <a href="#presentation" class="btn btn-outline">En savoir plus</a>
+    </div>
+  </div>
+</section>
+
+<section class="presentation" id="presentation">
+  <div class="wrap grid">
+    <h2>Présentation</h2>
+    <div class="body">
+      <p>Bienvenue sur EPS Côte d'Ivoire, un site dédié à l'Éducation Physique et Sportive en Côte d'Ivoire.</p>
+      <p>Le site a pour objectif de mettre à disposition des enseignants et des élèves des ressources utiles pour les cours d'EPS : cours prêts à l'emploi, fiches de séance et présentation des activités physiques et sportives.</p>
+    </div>
+  </div>
+</section>
+
+<section class="objectifs" id="objectifs">
+  <div class="wrap">
+    <h2>Objectifs</h2>
+    <ul class="obj-list">
+      <li>
+        <span class="obj-mark">01</span>
+        <div>
+          <h3>Proposer des cours d'EPS</h3>
+          <p>Des séquences claires, directement utilisables en classe.</p>
+        </div>
+      </li>
+      <li>
+        <span class="obj-mark">02</span>
+        <div>
+          <h3>Mettre à disposition des fiches de séances</h3>
+          <p>Des supports prêts à imprimer pour préparer et suivre chaque séance.</p>
+        </div>
+      </li>
+      <li>
+        <span class="obj-mark">03</span>
+        <div>
+          <h3>Présenter les activités physiques et sportives</h3>
+          <p>Un panorama des disciplines pratiquées dans les établissements ivoiriens.</p>
+        </div>
+      </li>
+      <li>
+        <span class="obj-mark">04</span>
+        <div>
+          <h3>Faciliter l'accès aux ressources pédagogiques</h3>
+          <p>Tout regrouper au même endroit pour que les enseignants gagnent du temps.</p>
+        </div>
+      </li>
+      <li>
+        <span class="obj-mark">05</span>
+        <div>
+          <h3>Promouvoir l'EPS en Côte d'Ivoire</h3>
+          <p>Faire connaître la discipline et valoriser son rôle dans l'éducation.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="contenu" id="contenu">
+  <div class="wrap">
+    <h2>Contenu du site</h2>
+    <p>Le site pourra proposer :</p>
+    <div class="res-grid">
+      <div class="res-item">
+        <h3>Cours d'EPS</h3>
+      </div>
+      <div class="res-item">
+        <h3>Fiches de leçons</h3>
+      </div>
+      <div class="res-item">
+        <h3>Fiches de séances</h3>
+      </div>
+      <div class="res-item">
+        <h3>Exercices pratiques</h3>
+      </div>
+      <div class="res-item">
+        <h3>Athlétisme</h3>
+      </div>
+      <div class="res-item">
+        <h3>Sports collectifs</h3>
+      </div>
+      <div class="res-item">
+        <h3>Sports individuels</h3>
+      </div>
+      <div class="res-item">
+        <h3>Conseils pour les enseignants</h3>
+      </div>
+      <div class="res-item">
+        <h3>Ressources pédagogiques</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech">
+  <div class="wrap">
+    <h2>Technologies utilisées</h2>
+    <div class="tech-row">
+      <span class="tech-pill">HTML</span>
+      <span class="tech-pill">CSS</span>
+      <span class="tech-pill">JavaScript</span>
+      <span class="tech-pill">GitHub Pages</span>
+    </div>
+    <p class="tech-note">Le projet est hébergé avec GitHub Pages.</p>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap grid">
+    <div>
+      <h2>Projet</h2>
+      <p>EPS Côte d'Ivoire est un projet destiné à faciliter l'accès aux ressources d'Éducation Physique et Sportive.</p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p>Pour toute suggestion ou contribution concernant le site, vous pouvez contacter l'administrateur du projet.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">EPS Côte d'Ivoire — pour une meilleure pratique de l'Éducation Physique et Sportive</div>
+</footer>
+
+</body>
+</html>
