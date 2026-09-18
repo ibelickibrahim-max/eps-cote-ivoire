@@ -103,10 +103,13 @@
   }
   .hero h1{
     font-family:var(--font-display);
-    font-size:clamp(40px, 8vw, 74px);
-    line-height:0.98;
+    font-size:clamp(32px, 8vw, 74px);
+    line-height:1.02;
     margin:0 0 22px;
     max-width:11ch;
+    overflow-wrap:break-word;
+    word-break:break-word;
+    hyphens:auto;
   }
   .hero p.lede{
     font-size:19px;
@@ -299,7 +302,8 @@
     font-size:14px;
     opacity:0.7;
   }
-
+.hero{padding:56px 0 50px;}
+    .hero h1{max-width:100%;}
   @media (max-width:720px){
     .presentation .grid{grid-template-columns:1fr;}
     .res-grid{grid-template-columns:1fr;}
