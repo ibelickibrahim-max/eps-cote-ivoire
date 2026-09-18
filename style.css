@@ -5,75 +5,129 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  background: #f4f7f9;
   color: #222;
 }
 
+/* EN-TÊTE */
 header {
-  background: #0b7a3b;
+  background: linear-gradient(135deg, #087f3e, #0b7a3b);
   color: white;
   text-align: center;
-  padding: 25px 15px;
+  padding: 35px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 header p {
-  margin: 8px 0 0;
+  margin: 10px 0 0;
+  font-size: 16px;
 }
 
+/* CONTENU */
 main {
-  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px 15px;
 }
 
 .welcome {
   background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 25px 20px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .welcome h2 {
   margin-top: 0;
+  color: #087f3e;
+  font-size: 25px;
 }
 
+.welcome p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* MENU */
 .menu {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .menu button {
   border: none;
   background: white;
-  padding: 22px 10px;
-  border-radius: 15px;
+  padding: 25px 15px;
+  border-radius: 18px;
   font-size: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+.menu button:active {
+  transform: scale(0.97);
 }
 
 .menu button:first-letter {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .menu span {
   display: block;
-  margin-top: 8px;
+  margin-top: 10px;
   font-weight: bold;
+  color: #222;
 }
 
+/* PIED DE PAGE */
 footer {
   text-align: center;
-  padding: 25px;
-  color: #666;
+  padding: 30px 15px;
+  margin-top: 30px;
+  background: #087f3e;
+  color: white;
 }
 
-@media (max-width: 400px) {
+/* TÉLÉPHONE */
+@media (max-width: 600px) {
+  header {
+    padding: 28px 15px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .menu button {
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  .welcome {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 380px) {
   .menu {
     grid-template-columns: 1fr;
   }
