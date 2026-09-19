@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const buttons = document.querySelectorAll(".menu button");
+  const buttons = document.querySelectorAll("button, a.btn, .hero a");
 
   buttons.forEach(function (button) {
 
