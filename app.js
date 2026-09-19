@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const buttons = document.querySelectorAll("button, a.btn, .hero a");
+  const buttons = document.querySelectorAll(".res-item, .showcase-card");
 
   buttons.forEach(function (button) {
 
@@ -43,7 +43,7 @@ else if (section.includes("savoir")) {
   });
 
 });
-
+});
 // ==// ===== MENU HAMBURGER =====
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
