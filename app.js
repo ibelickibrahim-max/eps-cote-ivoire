@@ -32,7 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
       else if (section.includes("Rechercher")) {
         alert("🔎 Recherche\n\nLa recherche sera bientôt disponible.");
       }
+else if (section.includes("Athlétisme")) {
+  alert("🏃 Athlétisme\n\nCourses, sauts et lancers : fiches et exercices à venir.");
+}
 
+else if (section.includes("Sports collectifs")) {
+  alert("⚽ Sports collectifs\n\nFootball, handball, basketball, volleyball : contenus à venir.");
+}
+
+else if (section.includes("Sports individuels")) {
+  alert("🤸 Sports individuels\n\nGymnastique, natation, judo : contenus à venir.");
+}
+
+else if (section.includes("Conseils")) {
+  alert("💡 Conseils pour les enseignants\n\nAstuces pédagogiques à venir.");
+}
+
+else if (section.includes("Ressources")) {
+  alert("📂 Ressources pédagogiques\n\nDocuments et supports à télécharger, bientôt disponibles.");
+}
 else if (section.includes("ressources")) {
   document.getElementById("ressources")?.scrollIntoView({ behavior: "smooth" });
 }
