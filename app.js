@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   buttons.forEach(function (button) {
 
     button.addEventListener("click", function (e) {
+      e.preventDefault();
 
       const section = button.innerText.trim();
 
