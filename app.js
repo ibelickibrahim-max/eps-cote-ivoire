@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-
 // ==// ===== MENU HAMBURGER =====
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
