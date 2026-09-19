@@ -473,3 +473,54 @@ section.badges{
   .showcase-grid{grid-template-columns:1fr;}
   .badges-row{grid-template-columns:1fr;}
 }
+/* ===== MENU HAMBURGER ===== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ink);
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .wrap {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .top .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+
+  .top-nav.active {
+    display: flex;
+  }
+
+  .top-nav a {
+    display: block;
+    padding: 12px;
+  }
+}
