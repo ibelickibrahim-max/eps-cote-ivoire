@@ -37,3 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+// ===== MENU HAMBURGER =====
+const menuToggle = document.querySelector(".menu-toggle");
+const topNav = document.querySelector(".top-nav");
+
+menuToggle.addEventListener("click", function () {
+  topNav.classList.toggle("active");
+});
