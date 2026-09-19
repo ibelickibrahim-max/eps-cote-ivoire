@@ -33,7 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
     });
+else if (section.includes("ressources")) {
+  document.getElementById("ressources")?.scrollIntoView({ behavior: "smooth" });
+}
 
+else if (section.includes("savoir")) {
+  alert("ℹ️ EPS Côte d'Ivoire\n\nDes cours, fiches de séance et activités pour les enseignants et élèves.");
+}
   });
 
 });
