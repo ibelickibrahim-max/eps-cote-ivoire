@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("🔎 Recherche\n\nLa recherche sera bientôt disponible.");
       }
 
-    });
+  
 else if (section.includes("ressources")) {
   document.getElementById("ressources")?.scrollIntoView({ behavior: "smooth" });
 }
