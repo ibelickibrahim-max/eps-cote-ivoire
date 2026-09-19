@@ -43,7 +43,9 @@ else if (section.includes("Sports collectifs")) {
 else if (section.includes("Sports individuels")) {
   alert("🤸 Sports individuels\n\nGymnastique, natation, judo : contenus à venir.");
 }
-
+else if (section.includes("Exercices")) {
+  alert("🏋️ Exercices pratiques\n\nExercices et situations d'apprentissage à venir.");
+}
 else if (section.includes("Conseils")) {
   alert("💡 Conseils pour les enseignants\n\nAstuces pédagogiques à venir.");
 }
