@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buttons.forEach(function (button) {
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (e) {
 
       const section = button.innerText.trim();
 
